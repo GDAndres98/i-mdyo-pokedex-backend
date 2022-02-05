@@ -1,10 +1,14 @@
 package techtest.modyo.pokedex.persistence.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class ChainLink {
     private PokemonSpecies species;
-    private List<ChainLink> evolves_to;
+
+    @JsonProperty("evolves_to")
+    private List<ChainLink> evolvesTo;
 
     public PokemonSpecies getSpecies() {
         return species;
@@ -14,11 +18,11 @@ public class ChainLink {
         this.species = species;
     }
 
-    public List<ChainLink> getEvolves_to() {
-        return evolves_to;
+    public List<ChainLink> getEvolvesTo() {
+        return evolvesTo;
     }
 
-    public void setEvolves_to(List<ChainLink> evolves_to) {
-        this.evolves_to = evolves_to;
+    public void setEvolvesTo(List<ChainLink> evolvesTo) {
+        this.evolvesTo = evolvesTo;
     }
 }

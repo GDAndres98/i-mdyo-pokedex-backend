@@ -1,0 +1,1 @@
+web: java -jar -Dspring.profiles.active=pdn build/libs/pokedex-1.0.0.jar
